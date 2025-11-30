@@ -36,7 +36,7 @@ type EncryptedMessagePayloadPb struct {
 	// The ISO 8601 timestamp of when the message was sent (by the sender).
 	SentTimestamp string `protobuf:"bytes,2,opt,name=sent_timestamp,json=sentTimestamp,proto3" json:"sent_timestamp,omitempty"`
 	// The URN that identifies the *type* of the payloadBytes.
-	// e.g., "urn:sm:type:text-message", "urn:sm:type:reaction"
+	// e.g., "urn:message:type:text-message", "urn:sm:type:reaction"
 	TypeId string `protobuf:"bytes,3,opt,name=type_id,json=typeId,proto3" json:"type_id,omitempty"`
 	// The raw, type-specific payload.
 	// (e.g., for a text message, this would be the UTF-8 bytes of the string).
